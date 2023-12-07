@@ -5,6 +5,7 @@ import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.hardware.CRServo;
 import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.DcMotorEx;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.hardware.Servo;
 
@@ -24,8 +25,8 @@ public class Robot {
     public Servo Plane;
     public Servo Diff1;
     public CRServo IntakeL;
-    public DcMotor Lift1;
-    public DcMotor Lift2;
+    public DcMotorEx Lift1;
+    public DcMotorEx Lift2;
     public CRServo IntakeR;
 
     public Robot (OpMode opMode, boolean isAuto) {
@@ -39,8 +40,8 @@ public class Robot {
         Plane = hardwareMap.get(Servo.class, "Plane");
         Diff1 = hardwareMap.get(Servo.class, "Diff1");
         IntakeL = hardwareMap.get(CRServo.class, "IntakeL");
-        Lift1 = hardwareMap.get(DcMotor.class, "Lift1");
-        Lift2 = hardwareMap.get(DcMotor.class, "Lift2");
+        Lift1 = hardwareMap.get(DcMotorEx.class, "Lift1");
+        Lift2 = hardwareMap.get(DcMotorEx.class, "Lift2");
         IntakeR = hardwareMap.get(CRServo.class, "IntakeR");
     }
 

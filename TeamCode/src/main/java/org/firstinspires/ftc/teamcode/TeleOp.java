@@ -82,6 +82,10 @@ public class TeleOp extends OpMode {
         telemetry.addData("LeftM2Target", robot.driveController.moduleLeft.motor2.getPower()*2600);
         telemetry.addData("RighttM1Target", robot.driveController.moduleRight.motor1.getPower()*2600);
         telemetry.addData("RightM2Target", robot.driveController.moduleRight.motor2.getPower()*2600);
+        telemetry.addData("Left1Position", liftanddiff.Lift1.getCurrentPosition());
+        telemetry.addData("Left1Position", liftanddiff.LastLift1Encoder);
+        telemetry.addData("Left1Position", liftanddiff.Lift2.getCurrentPosition());
+        telemetry.addData("Left1Position", liftanddiff.LastLift2Encoder);
         telemetry.update();
     }
 
